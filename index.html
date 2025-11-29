@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/icon-192x192.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CryptoDragon">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.svg">
+
+    <title>CryptoDragon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-white">
+
+    <div id="root"></div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDxtey7azZQIfOLR8VCEE5z9JDnnuRnEIU",
+            authDomain: "crypto-dragon-8a27a.firebaseapp.com",
+            databaseURL: "https://crypto-dragon-8a27a-default-rtdb.firebaseio.com",
+            projectId: "crypto-dragon-8a27a",
+            storageBucket: "crypto-dragon-8a27a.firebasestorage.app",
+            messagingSenderId: "358075688386",
+            appId: "1:358075688386:web:16dd3b6a90cdd0588aa25b",
+            measurementId: "G-B16JX6XD9W"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        window.firebase = { app, db };
+    </script>
+    
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
